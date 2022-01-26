@@ -16,48 +16,50 @@ No se permite acentuación de palabras
 //"ufat" es convertido para "u"
 //Solo letras minusculas
 //No se permite acentuación de palabras
-
 */
-var entrada = document.querySelector("#input-texto");
-var textoEntrada =entrada.value
-var botonEncriptar =document.querySelector("#btn-encriptar");
-var letraCambiada = "";
-var textoEncriptado ="";
-var boton = document.querySelector("button")
-    function compararEntrada(letra){
-        if (letra === "e"){
-           return letraCambiada ="enter";
-        }   else {
-            if (letra === "i"){
-                return letraCambiada ="imes";
-             }   else {
-                if (letra === "a"){
-                    return letraCambiada ="ai";
-                 }   else {
-                    if (letra === "o"){
-                        return letraCambiada ="ober";
-                     }   else if (letra === "u"){
-                        return letraCambiada ="ufat";
-                     }  else{
-                         letraCambiada=letra;
-                         return letraCambiada;
-                     }  
-                 }
-             }
-        }
+var botonEncriptar = document.querySelector("#btn-encriptar");
+var mensaje= document.querySelector("#msg");
+var textoSalida="";
 
 
 
-       
-   a }
-
-
-    function encriptar(){
-        textoEntrada = entrada.value;
-        for(var i = 0; i< textoEntrada.lenght; i++){
-            compararEntrada(textoEntrada[i]);
-            textoEncriptado = textoEncriptado +letraCambiada;
-            return textoEncriptado;
-        }
-        console.log(textoEncriptado);
+botonEncriptar.addEventListener("click",function(event){
+    event.preventDefault();
+    let textoSalida ="";
+    var entrada = document.querySelector("#input-texto")
+    var textoEntrada =entrada.value.split("");
+    for(var i=0;i <textoEntrada.length ; i++){
+        comparaLetra(textoEntrada[i]);
     }
+    entrada.value = "";
+    setTimeout(mostrarMsjEncriptado(),500);
+})
+
+function mostrarMsjEncriptado(){
+    mensaje.value = textoSalida;
+    textoSalida = "";
+}
+function comparaLetra(letra){
+    switch (letra) {
+        case "a":
+            textoSalida+="ai"
+            break;
+        case "e":
+            textoSalida+="enter"
+            break;
+        case "i":
+            textoSalida+="imes"
+            break;
+        case "o":
+            textoSalida+="ober"
+            break;
+        case "u":
+            textoSalida+="uber"
+            break;
+        default:
+            textoSalida+=letra
+            break;
+    }
+}
+
+
