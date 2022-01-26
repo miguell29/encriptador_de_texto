@@ -20,8 +20,15 @@ No se permite acentuación de palabras
 var botonEncriptar = document.querySelector("#btn-encriptar");
 var mensaje= document.querySelector("#msg");
 var textoSalida="";
+var botoncopiar =document.querySelector("#btn-copy")
 
 
+function copy(){
+    copyText = document.getElementById("msg")
+    copyText.select();
+    document.execCommand("copy");
+    alert("el texto se copio correctamente")
+}
 
 botonEncriptar.addEventListener("click",function(event){
     event.preventDefault();
@@ -54,7 +61,7 @@ function comparaLetra(letra){
             textoSalida+="ober"
             break;
         case "u":
-            textoSalida+="uber"
+            textoSalida+="ufat"
             break;
         default:
             textoSalida+=letra
