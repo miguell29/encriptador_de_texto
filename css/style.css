@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("fondo_1.jpg") ; background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  border: 5px rgb(209, 15, 32);
+  color: rgb(255, 0, 149);
+  padding: 50px;
+  width: 30vw;
+  margin: auto;
+
+}
+
+.box {
+  padding: 15px;
+  margin: 50px 10px 0 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(17, 4, 16);
+  border-radius: 0.5em;
+  width: 40vw;
+  height: auto;
+}
+
+.btn {
+  border: 0;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(158, 20, 151);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 0.5em;
+}
+
+.text-input {
+  border-radius: 1em;
+  border: 2px solid rgb(4, 255, 38);
+  display: block;
+  padding: 2em;
+  width: 100%;
+  height: 40px;
+}
+
+.pie-pagina {
+  color: antiquewhite;
+  background-color: rgb(158, 20, 151);
+  padding: 1em 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.frase-input{
+  color:rgb(255, 0, 149);
+  text-align: center;
+}
+
+.mensaje-salida{
+  color: rgb(255, 0, 149);
+  text-align: center;
+}

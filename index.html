@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1 class="titulo">código secreto</h1>
+  <h1 class="titulo">Encripto-word</h1>
 
   <main class="main">
     <section class="form box">
       <form action="">
-        <label for="input-texto">Solo letras minúsculas, sin acento</label>
+        <label class="frase-input" for="input-texto">Ingrese su frase Aquí</label>
         <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
         <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
         <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
@@ -21,14 +21,18 @@
     </section>
   
     <section class="msg box">
-      <h2 id="">Mensaje encriptada:</h2>
+      <label class="mensaje-salida">Aquí aparecerá su Respuesta</label>
       <input class="text-input" type="text" id="msg"></input>
       <input class="btn" type="submit" value="copiar" id="btn-copy">
     </section>
   </main>
+  <footer class="pie-pagina">  &copy; 01/2022 created by Miguel Juárez
+  </footer>
 
-  <script src="script.js"></script>
-  <script src="desencriptar.js"></script>
-  <script src="copiar.js"></script>  
+
+  <script src="javascript/main.js"></script>
+  <script src="javascript/encriptar.js"></script>
+  <script src="javascript/desencriptar.js"></script>
+  <script src="javascript/copiar.js"></script>  
 </body>
 </html>

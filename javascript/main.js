@@ -30,17 +30,6 @@ function copy(){
     alert("el texto se copio correctamente")
 }
 
-botonEncriptar.addEventListener("click",function(event){
-    event.preventDefault();
-    let textoSalida ="";
-    var entrada = document.querySelector("#input-texto")
-    var textoEntrada =entrada.value.split("");
-    for(var i=0;i <textoEntrada.length ; i++){
-        comparaLetra(textoEntrada[i]);
-    }
-    entrada.value = "";
-    setTimeout(mostrarMsjEncriptado(),500);
-})
 
 function mostrarMsjEncriptado(){
     mensaje.value = textoSalida;
